@@ -6,7 +6,6 @@ models:
     config:
       contract:
         enforced: true
-      group: finance
     columns:
       - name: order_id
         description: The unique key of the orders mart.
