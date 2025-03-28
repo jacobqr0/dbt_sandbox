@@ -3,6 +3,8 @@ version: 2
 models:
   - name: dim_customer
     description: One record per customer
+    config:
+      materialized: view
     columns:
       - name: customer_id
         description: Primary key

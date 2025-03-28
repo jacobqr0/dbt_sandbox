@@ -1,4 +1,4 @@
-{{ config(materialized='view') }}
+{{ config(materialized='view', meta={"contains_pii":true}) }}
 
 with products as (
 

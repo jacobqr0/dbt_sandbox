@@ -57,4 +57,16 @@ sources:
         - name: created
         - name: _batched_at
 
+- name: environmental
+  database: raw
+  loader: manual
+  
+  tables:
+    - name: water_levels
+      description: contains water level data for a particular location and various readings.
 
+      columns: 
+        - name: eventid
+        - name: date
+        - name: gauge
+        - name: height
