@@ -70,3 +70,6 @@ sources:
         - name: date
         - name: gauge
         - name: height
+
+    - name: wells_state
+      description: Contains one row per well, and details the state of the well.

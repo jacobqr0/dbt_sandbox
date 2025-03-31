@@ -3,8 +3,10 @@ version: 2
 models:
   - name: dim_customer
     description: One record per customer
+    access: protected
     config:
       materialized: view
+      group: finance
     columns:
       - name: customer_id
         description: Primary key
