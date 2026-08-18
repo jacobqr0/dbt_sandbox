@@ -1,15 +1,8 @@
-name: jaffle_shop_sweets
-version: '1.0.0'
-config-version: 2
-
-profile: my-snowflake-db
-
+name: my_fun_project
 target-path: target
 clean-targets: [target, dbt_packages]
 
 packages-install-path: dbt_packages
-
-require-dbt-version: [">1.0.0", "<=1.9.2"]
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -30,11 +23,10 @@ quoting:
   identifier: false
 
 models:
-  jaffle_shop_sweets:
-    marts:
-      +required_tests: {"unique.*|not_null": 1}
-      +materialized: table
-      +schema: dbo
+  my_fun_project:
+    staging:
+      +materialized: view
+      +schema: staging
     intermediate:
       +materialized: ephemeral
 
@@ -42,8 +34,3 @@ vars:
   start_date: "2025-01-01"
   max_count_value: 30
   string_value: "HeyHoHi"
-
-on-run-start: SELECT 1
-on-run-end: SELECT 1
-
-restrict-access: false

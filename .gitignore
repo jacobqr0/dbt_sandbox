@@ -5,3 +5,4 @@ target/
 profiles.yml
 package-lock.yml
 .user.yml
+dbt_internal_packages/
